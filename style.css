@@ -1,113 +1,26 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding-bottom: 60px;
-  background-color: #fffdf7;
-  color: #333;
-}
-
-/* HEADER */
-header {
-  background: linear-gradient(90deg, #c62828, #2e7d32);
-  color: white;
-  text-align: center;
-  padding: 1.5rem 1rem;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 2rem;
-}
-
-header p {
-  margin: 0.5rem 0 1rem;
-  font-style: italic;
-}
-
-#toggleMenu {
-  display: block; /* visible por defecto en móviles */
-  background: white;
-  color: #c62828;
-  border: none;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  border-radius: 8px;
-  box-shadow: 1px 2px 5px rgba(0,0,0,0.2);
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-#toggleMenu:hover {
-  background: #f0f0f0;
-}
-
-/* MAIN */
+/* Centralizar el main */
 main {
   max-width: 700px;
-  margin: 1.5rem auto;
+  margin: 1.5rem auto; /* Esto centra horizontalmente */
   padding: 0 1rem;
   transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column; /* Para pantallas pequeñas, se apilan */
+  align-items: center; /* Centra horizontalmente los hijos */
+  gap: 1.5rem; /* Separación vertical pequeña por defecto */
 }
 
-main.oculto {
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.5s ease;
-}
-
-.categoria {
-  margin-bottom: 2rem;
-  padding: 1rem;
-  background: #fff;
-  border: 1px solid #eee;
-  border-radius: 10px;
-  box-shadow: 0px 2px 8px rgba(0,0,0,0.05);
-}
-
-.categoria h2 {
-  margin-bottom: 0.5rem;
-  color: #c62828;
-}
-
-.categoria ul {
-  list-style: none;
-  padding: 0;
-}
-
-.categoria li {
-  padding: 0.5rem 0;
-  border-bottom: 1px dashed #ccc;
-}
-
-/* FOOTER */
-footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background: #fafafa;
-  text-align: center;
-  padding: 0.8rem;
-  font-size: 0.9rem;
-  color: #444;
-  border-top: 1px solid #ddd;
-  box-shadow: 0px -1px 5px rgba(0,0,0,0.1);
-}
-
-/* RESPONSIVE - A partir de 768px ocultamos el botón y mostramos todo */
-@media screen and (min-width: 768px) {
-  #toggleMenu {
-    display: none;
-  }
-
+/* Para pantallas grandes - separar más */
+@media screen and (min-width: 1024px) {
   main {
-    opacity: 1 !important;
-    max-height: unset !important;
-    pointer-events: all !important;
+    flex-direction: row; /* Los hijos en fila */
+    justify-content: center; /* Centra la fila */
+    gap: 4rem; /* Más separación entre secciones */
   }
 
-  #menu {
-    display: flex !important; /* si usas un contenedor de menú aparte */
+  /* Cada sección toma un ancho fijo o proporcional */
+  main .categoria {
+    flex: 1 1 200px; /* Crece y se adapta */
+    max-width: 250px; /* Máximo ancho para cada bloque */
   }
 }
