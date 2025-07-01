@@ -109,6 +109,8 @@ footer {
   }
 
   #menu {
-    display: flex !important; /* si usas un contenedor de menú aparte */
+    display: flex !important;
+    justify-content: center;
+    gap: 4rem;
   }
 }
