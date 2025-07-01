@@ -25,7 +25,8 @@ header p {
 }
 
 #toggleMenu {
-  display: block; /* visible por defecto en móviles */
+  display: block;
+  margin: 1rem auto;
   background: white;
   color: #c62828;
   border: none;
@@ -35,7 +36,6 @@ header p {
   box-shadow: 1px 2px 5px rgba(0,0,0,0.2);
   cursor: pointer;
   transition: background 0.3s;
-  justify-content: center;
 }
 
 #toggleMenu:hover {
