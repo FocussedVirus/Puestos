@@ -25,6 +25,7 @@ header p {
 }
 
 #toggleMenu {
+  display: block; /* visible por defecto en móviles */
   background: white;
   color: #c62828;
   border: none;
@@ -35,6 +36,7 @@ header p {
   cursor: pointer;
   transition: background 0.3s;
 }
+
 #toggleMenu:hover {
   background: #f0f0f0;
 }
@@ -93,7 +95,7 @@ footer {
   box-shadow: 0px -1px 5px rgba(0,0,0,0.1);
 }
 
-/* RESPONSIVE */
+/* RESPONSIVE - A partir de 768px ocultamos el botón y mostramos todo */
 @media screen and (min-width: 768px) {
   #toggleMenu {
     display: none;
@@ -103,5 +105,9 @@ footer {
     opacity: 1 !important;
     max-height: unset !important;
     pointer-events: all !important;
+  }
+
+  #menu {
+    display: flex !important; /* si usas un contenedor de menú aparte */
   }
 }
