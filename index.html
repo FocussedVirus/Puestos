@@ -10,25 +10,25 @@
   <header>
     <h1>🌮 Tacos El Güero</h1>
     <p>¡Sabor callejero que conquista!</p>
-    <button class="menu-toggle" aria-label="Mostrar menú">☰ Menú</button>
+    <button id="toggleMenu">☰ Ver menú</button>
   </header>
 
-  <main id="main-menu">
+  <main id="menuContent">
     <section class="categoria">
       <h2>Tacos</h2>
       <ul>
-        <li><strong>Taco de Pastor</strong> - $15</li>
-        <li><strong>Taco de Bistec</strong> - $17</li>
-        <li><strong>Taco de Tripa</strong> - $18</li>
-        <li><strong>Taco Campechano</strong> - $20</li>
+        <li><strong>Pastor</strong> - $15</li>
+        <li><strong>Bistec</strong> - $17</li>
+        <li><strong>Tripa</strong> - $18</li>
+        <li><strong>Campechano</strong> - $20</li>
       </ul>
     </section>
 
     <section class="categoria">
       <h2>Bebidas</h2>
       <ul>
-        <li><strong>Agua de Horchata</strong> - $12</li>
-        <li><strong>Agua de Jamaica</strong> - $12</li>
+        <li><strong>Horchata</strong> - $12</li>
+        <li><strong>Jamaica</strong> - $12</li>
         <li><strong>Refresco</strong> - $15</li>
       </ul>
     </section>
@@ -37,16 +37,24 @@
       <h2>Extras</h2>
       <ul>
         <li><strong>Queso</strong> - $5</li>
-        <li><strong>Totopos</strong> - $10</li>
         <li><strong>Guacamole</strong> - $8</li>
+        <li><strong>Totopos</strong> - $10</li>
       </ul>
     </section>
   </main>
 
   <footer>
-    <p>Escanea el código QR para ver el menú siempre que quieras 📱</p>
-    <p>Contacto: <a href="tel:+521234567890">+52 123 456 7890</a></p>
+    <p>📍 Calle del Sabor #123 · 📞 55-1234-5678 · 🕓 18:00 a 1:00 AM</p>
   </footer>
-  <script src="script.js"></script>
+
+  <script>
+    const toggleBtn = document.getElementById('toggleMenu');
+    const menu = document.getElementById('menuContent');
+
+    toggleBtn.addEventListener('click', () => {
+      menu.classList.toggle('visible');
+      toggleBtn.textContent = menu.classList.contains('visible') ? '✖ Cerrar menú' : '☰ Ver menú';
+    });
+  </script>
 </body>
 </html>
