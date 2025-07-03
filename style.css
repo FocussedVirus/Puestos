@@ -115,16 +115,13 @@ footer {
   }
   /* Por defecto (móvil): whatsapp abajo derecha, tamaño pequeño */
 .whatsapp-float {
-  position: fixed;
   bottom: 15px;
   right: 15px;
-  left: auto;
-  z-index: 1000;
 }
 
 .whatsapp-icon {
-  width: 40px;
-  height: 40px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
   transition: transform 0.3s ease;
