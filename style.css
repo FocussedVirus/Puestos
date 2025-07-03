@@ -113,44 +113,39 @@ footer {
     justify-content: center;
     gap: 4rem;
   }
-  .whatsapp-float {
-  position: fixed;
-  bottom: 80px;
-  right: 15px;
-  background-color: transparent;
-  border: none;
-  z-index: 999;
-  cursor: pointer;
-  padding: 0;
-}
-
-/* Estilos para móvil (por defecto) */
-.whatsapp-icon {
+  /* Por defecto (móvil): whatsapp abajo derecha, tamaño pequeño */
+.whatsapp-float {
   position: fixed;
   bottom: 15px;
   right: 15px;
-  left: auto;  
+  left: auto;
+  z-index: 1000;
+}
+
+.whatsapp-icon {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
   transition: transform 0.3s ease;
-  z-index: 1000;
 }
 
 .whatsapp-icon:hover {
   transform: scale(1.1);
 }
 
-/* Estilos para escritorio */
+/* Escritorio (≥768px) mantiene tamaño y posición mayor */
 @media screen and (min-width: 768px) {
-  .whatsapp-icon {
-    width: 55px;
-    height: 55px;
+  .whatsapp-float {
     bottom: 20px;
     right: 20px;
   }
+  .whatsapp-icon {
+    width: 55px;
+    height: 55px;
+  }
 }
+
 
 
 
