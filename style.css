@@ -113,4 +113,34 @@ footer {
     justify-content: center;
     gap: 4rem;
   }
+  .whatsapp-float {
+  position: fixed;
+  bottom: 80px;
+  right: 15px;
+  background-color: transparent;
+  border: none;
+  z-index: 999;
+  cursor: pointer;
+  padding: 0;
+}
+
+.whatsapp-icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-icon:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 600px) {
+  .whatsapp-icon {
+    width: 45px;
+    height: 45px;
+  }
+}
+
 }
