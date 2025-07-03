@@ -50,6 +50,14 @@ main {
   transition: all 0.3s ease;
 }
 
+main.oculto {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease;
+}
+
 .categoria {
   margin-bottom: 2rem;
   padding: 1rem;
