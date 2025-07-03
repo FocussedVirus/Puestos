@@ -115,7 +115,7 @@ footer {
   }
   .whatsapp-float {
   position: fixed;
-  bottom: 80px;
+  bottom: 120px;
   right: 15px;
   background-color: transparent;
   border: none;
@@ -125,11 +125,8 @@ footer {
 }
 
 .whatsapp-icon {
- position: fixed;
-  bottom: 20px;
-  right: 20px; 
-  left: auto;  
-  z-index: 1000; 
+  width: 2px;
+  height: 2px;
   border-radius: 50%;
   box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
   transition: transform 0.3s ease;
@@ -141,8 +138,8 @@ footer {
 
 @media screen and (min-width: 768px) {
   .whatsapp-icon {
-    width: 55px;
-    height: 55px;
+    bottom: 120px;
+    right: 15px;
   }
 }
 
