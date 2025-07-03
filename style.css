@@ -125,10 +125,10 @@ footer {
 }
 
 .whatsapp-icon {
-  width: 18px;
-  height: 18px;
+  width: 55px;
+  height: 55px;
   border-radius: 50%;
-  box-shadow: none; /* opcional: elimina sombra si quieres que luzca más sencillo */
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
   transition: transform 0.3s ease;
 }
 
@@ -138,8 +138,9 @@ footer {
 
 @media screen and (max-width: 600px) {
   .whatsapp-icon {
-    width: 16px;
-    height: 16px;
+    width: 10px;
+    height: 10px;
   }
 }
+
 }
