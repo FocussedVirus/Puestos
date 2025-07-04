@@ -8,8 +8,8 @@ body {
 
 /* HEADER */
 header {
-  /* Fondo vintage con tonos terracota y verde oliva */
-  background: linear-gradient(135deg, #A75D3F, #D9985A, #617A55);
+  /* Fondo vintage sin verde oliva */
+  background: linear-gradient(135deg, #A75D3F, #D9985A);
   color: white;
   text-align: center;
   padding: 1.5rem 1rem;
@@ -20,13 +20,13 @@ header h1 {
   margin: 0;
   font-size: 2rem;
   color: white; /* texto blanco sólido */
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.5); /* sombra para darle profundidad */
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
 }
 
 header p {
   margin: 0.5rem 0 1rem;
   font-style: italic;
-  color: #F0A500; /* amarillo mostaza para contraste */
+  color: #F3E8D0; /* crema claro, más suave */
 }
 
 #toggleMenu {
@@ -43,9 +43,18 @@ header p {
   transition: background 0.3s, color 0.3s;
 }
 
+/* Hover cambiado a mostaza oscuro suave */
 #toggleMenu:hover {
-  background: #F0A500; /* amarillo mostaza en hover */
-  color: #2E7D32; /* verde intenso */
+  background: #B07A25; /* mostaza oscuro */
+  color: white;
+}
+
+/* Evitar estado "pegado" en móvil con :focus y :active */
+#toggleMenu:focus,
+#toggleMenu:active {
+  outline: none;
+  background: #B07A25;
+  color: white;
 }
 
 /* MAIN */
@@ -67,8 +76,8 @@ main.oculto {
 .categoria {
   margin-bottom: 2rem;
   padding: 1rem;
-  background: #FFF9F0; /* beige suave */
-  border: 1px solid #7B4B32; /* marrón suave para bordes */
+  background: #FFF9F0;
+  border: 1px solid #7B4B32;
   border-radius: 10px;
   box-shadow: 0px 2px 8px rgba(123, 75, 50, 0.1);
 }
@@ -102,7 +111,7 @@ footer {
   box-shadow: 0px -1px 5px rgba(123, 75, 50, 0.1);
 }
 
-/* RESPONSIVE - A partir de 768px ocultamos el botón y mostramos todo */
+/* RESPONSIVE */
 @media screen and (min-width: 768px) {
   #toggleMenu {
     display: none;
@@ -121,7 +130,6 @@ footer {
   }
 }
 
-/* Escritorio (≥768px) mantiene tamaño y posición mayor */
 @media screen and (max-width: 768px) {
   .whatsapp-icon {
     width: 50px;
