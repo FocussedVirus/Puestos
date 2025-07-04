@@ -2,13 +2,13 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding-bottom: 60px;
-  background-color: #fffdf7;
-  color: #333;
+  background-color: #FFF9F0; /* beige cálido */
+  color: #3A3A3A; /* gris oscuro */
 }
 
 /* HEADER */
 header {
-  background: linear-gradient(90deg, #c62828, #2e7d32);
+  background: linear-gradient(90deg, #C62828, #2E7D32);
   color: white;
   text-align: center;
   padding: 1.5rem 1rem;
@@ -22,24 +22,26 @@ header h1 {
 header p {
   margin: 0.5rem 0 1rem;
   font-style: italic;
+  color: #F0A500; /* amarillo mostaza para dar contraste */
 }
 
 #toggleMenu {
   display: block;
   margin: 1rem auto;
-  background: white;
-  color: #c62828;
+  background: #F0A500; /* botón mostaza */
+  color: #2E7D32; /* texto verde intenso */
   border: none;
   padding: 0.5rem 1rem;
   font-size: 1rem;
   border-radius: 8px;
   box-shadow: 1px 2px 5px rgba(0,0,0,0.2);
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background 0.3s, color 0.3s;
 }
 
 #toggleMenu:hover {
-  background: #f0f0f0;
+  background: #C62828; /* rojo fuerte al hover */
+  color: #FFF9F0; /* texto claro */
 }
 
 /* MAIN */
@@ -61,15 +63,15 @@ main.oculto {
 .categoria {
   margin-bottom: 2rem;
   padding: 1rem;
-  background: #fff;
-  border: 1px solid #eee;
+  background: #FFF9F0; /* mismo beige suave */
+  border: 1px solid #7B4B32; /* marrón suave para bordes */
   border-radius: 10px;
-  box-shadow: 0px 2px 8px rgba(0,0,0,0.05);
+  box-shadow: 0px 2px 8px rgba(123, 75, 50, 0.1); /* sombra marrón suave */
 }
 
 .categoria h2 {
   margin-bottom: 0.5rem;
-  color: #c62828;
+  color: #C62828; /* rojo para títulos */
 }
 
 .categoria ul {
@@ -79,7 +81,7 @@ main.oculto {
 
 .categoria li {
   padding: 0.5rem 0;
-  border-bottom: 1px dashed #ccc;
+  border-bottom: 1px dashed #7B4B32; /* línea marrón */
 }
 
 /* FOOTER */
@@ -87,13 +89,13 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background: #ffffff;
+  background: #FFF9F0;
   text-align: center;
   padding: 0.6rem;
   font-size: 0.9rem;
-  color: #444;
-  border-top: 1px solid #ddd;
-  box-shadow: 0px -1px 5px rgba(0,0,0,0.1);
+  color: #7B4B32; /* marrón */
+  border-top: 1px solid #7B4B32;
+  box-shadow: 0px -1px 5px rgba(123, 75, 50, 0.1);
 }
 
 /* RESPONSIVE - A partir de 768px ocultamos el botón y mostramos todo */
@@ -113,6 +115,7 @@ footer {
     justify-content: center;
     gap: 4rem;
   }
+}
 
 /* Escritorio (≥768px) mantiene tamaño y posición mayor */
 @media screen and (max-width: 768px) {
@@ -120,5 +123,4 @@ footer {
     width: 50px;
     height: 50px;
   }
-}
 }
