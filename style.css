@@ -17,6 +17,9 @@ header {
 header h1 {
   margin: 0;
   font-size: 2rem;
+  background: linear-gradient(90deg, #C62828, #F0A500);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 header p {
@@ -28,8 +31,8 @@ header p {
 #toggleMenu {
   display: block;
   margin: 1rem auto;
-  background: #F0A500; /* botón mostaza */
-  color: #2E7D32; /* texto verde intenso */
+  background: #C62828; /* rojo original */
+  color: white; /* texto blanco para contraste */
   border: none;
   padding: 0.5rem 1rem;
   font-size: 1rem;
@@ -40,8 +43,8 @@ header p {
 }
 
 #toggleMenu:hover {
-  background: #C62828; /* rojo fuerte al hover */
-  color: #FFF9F0; /* texto claro */
+  background: #F0A500; /* amarillo mostaza en hover */
+  color: #2E7D32; /* verde intenso en texto */
 }
 
 /* MAIN */
