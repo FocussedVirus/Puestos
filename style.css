@@ -8,8 +8,8 @@ body {
 
 /* HEADER */
 header {
-  /* Fondo vintage sin verde oliva */
-  background: linear-gradient(135deg, #A75D3F, #D9985A);
+  /* Nuevo fondo vintage cálido y suave */
+  background: linear-gradient(135deg, #8B5E3C, #C9A66B, #D9C9B3);
   color: white;
   text-align: center;
   padding: 1.5rem 1rem;
@@ -26,7 +26,7 @@ header h1 {
 header p {
   margin: 0.5rem 0 1rem;
   font-style: italic;
-  color: #F3E8D0; /* crema claro, más suave */
+  color: #F3E8D0; /* crema claro, suave */
 }
 
 #toggleMenu {
@@ -40,22 +40,11 @@ header p {
   border-radius: 8px;
   box-shadow: 1px 2px 5px rgba(0,0,0,0.2);
   cursor: pointer;
-  transition: background 0.3s, color 0.3s;
+  transition: none; /* sin transición ni hover */
 }
 
-/* Hover cambiado a mostaza oscuro suave */
-#toggleMenu:hover {
-  background: #B07A25; /* mostaza oscuro */
-  color: white;
-}
-
-/* Evitar estado "pegado" en móvil con :focus y :active */
-#toggleMenu:focus,
-#toggleMenu:active {
-  outline: none;
-  background: #B07A25;
-  color: white;
-}
+/* Eliminar hover y foco */
+/* No hay hover ni cambio al hacer foco */
 
 /* MAIN */
 main {
